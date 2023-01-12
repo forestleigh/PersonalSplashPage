@@ -1,6 +1,6 @@
 .card {
     z-index: 9;
-    box-shadow: 0 4px 8px 0 grey;
+    box-shadow: 0 4px 6px 0 rgb(195, 195, 195);
     background: whitesmoke;
     border-radius: 5px;
     max-width: 300px;
@@ -29,8 +29,7 @@ p,
 }
 
 a {
-    padding: 10px;
-    padding-top: 10px;
+    padding: 15px;
     color: darkslategrey
 }
 

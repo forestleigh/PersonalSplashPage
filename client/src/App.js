@@ -1,6 +1,6 @@
 import React from "react";
 import "../src/styles/app.scss";
-import me from "../src/assets/me.jpg"
+import me from "../src/assets/me.png"
 
 const App = () => (
     <>
@@ -10,8 +10,8 @@ const App = () => (
           <h1>Forest Leigh</h1>
           <p class="title">Software Engineer</p>
           <p class="title">Caltech</p>
-          <a href="#"><i class="fa fa-github"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/forestleigh" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/forestleigh" target="_blank"><i class="fa fa-linkedin"></i></a>
         </div>
       <div id="particle-container">
         <div class="particle"></div>

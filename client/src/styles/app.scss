@@ -17,14 +17,21 @@
     font-size: 18px;
   }
 
+h1 {
+    color: darkslategrey;
+    font-size: 32px;
+    padding-bottom: -5px;
+  }
+
 p,
-h1,
 .title {
     padding: 5px;
 }
 
 a {
     padding: 10px;
+    padding-top: 10px;
+    color: darkslategrey
 }
 
 img {
@@ -43,18 +50,18 @@ position: absolute;
 @for $i from 1 through 120 {
 @keyframes particle-animation-#{$i} {
   100% {
-    transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+    transform: translate3d((random(95) * 1vw), (random(95) * 1vh), (random(95) * 1vh));
   }
 }
 
 .particle:nth-child(#{$i}){
-  animation: particle-animation-#{$i} 60s infinite;
+  animation: particle-animation-#{$i} 90s infinite;
   $size: random(5) + 5 + px;
   opacity: calc(random(100) / 100);
   height: $size;
   width: $size;
-  animation-delay: -$i * .2s;
-  transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+  animation-delay: -$i * .5s;
+  transform: translate3d((random(95) * 1vw), (random(95) * 1vh), (random(95) * 1vh));
   background: hsl(random(360), 70%, 50%);
 }
 }

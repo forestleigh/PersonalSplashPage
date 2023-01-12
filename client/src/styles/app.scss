@@ -1,0 +1,60 @@
+.card {
+    z-index: 9;
+    box-shadow: 0 4px 8px 0 grey;
+    background: whitesmoke;
+    border-radius: 5px;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+  }
+  
+.title {
+    color: grey;
+    font-size: 18px;
+  }
+
+p,
+h1,
+.title {
+    padding: 5px;
+}
+
+a {
+    padding: 10px;
+}
+
+img {
+  border-radius: 5px;
+}
+
+body {
+  background: #ecf3f3;
+}
+
+.particle {
+position: absolute;
+ border-radius: 50%;
+}
+
+@for $i from 1 through 120 {
+@keyframes particle-animation-#{$i} {
+  100% {
+    transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+  }
+}
+
+.particle:nth-child(#{$i}){
+  animation: particle-animation-#{$i} 60s infinite;
+  $size: random(5) + 5 + px;
+  opacity: calc(random(100) / 100);
+  height: $size;
+  width: $size;
+  animation-delay: -$i * .2s;
+  transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+  background: hsl(random(360), 70%, 50%);
+}
+}

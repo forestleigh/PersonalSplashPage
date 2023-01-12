@@ -14,11 +14,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/forestleigh/personal-splash-page/issues"
-  },
-  "homepage": "https://github.com/forestleigh/personal-splash-page#readme",
+  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",

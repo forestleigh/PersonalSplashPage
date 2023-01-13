@@ -4,12 +4,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./client/index.js",
   output: {
-    // eslint-disable-next-line no-undef
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
     filename: "bundle.js",
   },
-  mode: "development",
+  mode: "production",
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   module: {
     rules: [
       {
@@ -24,18 +28,17 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        type: 'asset/resource'
+        type: "asset/resource",
       },
     ],
   },
   devServer: {
     historyApiFallback: true,
     static: {
-      // eslint-disable-next-line no-undef
       directory: path.join(__dirname, "build"),
       publicPath: "/",
     },

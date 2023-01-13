@@ -1,9 +1,8 @@
-const express = require('express');
-const path = require('path');
-const cors = require('cors');
+const express = require("express");
+const path = require("path");
+const cors = require("cors");
 
 const app = express();
-// eslint-disable-next-line no-undef
 const PORT = process.env.PORT || 3000;
 
 // handle parsing request body
@@ -12,24 +11,24 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // get request for index.html
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/index.html'));
-})
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/index.html"));
+});
 
 // handle request for static files
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, "../build")));
 
-// catch-all route handler for any requests to an unknown route
+// catch-all for requests to an unknown route
 app.use((req, res) => {
-  res.status(404).send('404 Errors');
+  res.status(404).send("404 Errors");
 });
 
 // Global error handler
 app.use((err, req, res, next) => {
   const defaultErr = {
-    log: 'Express error handler caught unknown middleware error',
+    log: "Express error handler caught unknown middleware error",
     status: 400,
-    message: { err: 'An error occurred. In global error handler' },
+    message: { err: "An error occurred. In global error handler" },
   };
   const errorObj = Object.assign({}, defaultErr, err);
   console.log(errorObj.log);

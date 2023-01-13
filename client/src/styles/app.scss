@@ -1,7 +1,6 @@
 .card {
     z-index: 9;
-    // box-shadow: 0 4px 6px 0 rgb(195, 195, 195);
-    background: rgba(245, 245, 245, 0.66);
+    background: rgba(245, 245, 245, 0.388);
     max-width: 300px;
     position: absolute;
     top: 50%;
@@ -12,7 +11,7 @@
   }
   
 .title {
-    color: grey;
+    color: rgb(54, 77, 77);
     font-size: 18px;
   }
 
@@ -28,8 +27,9 @@ p,
 }
 
 a {
-    padding: 15px;
-    color: darkslategrey
+    padding: 18px;
+    margin-top: 10px;
+    color: darkslategrey;
 }
 
 img {
@@ -44,18 +44,19 @@ position: absolute;
 @for $i from 1 through 120 {
 @keyframes particle-animation-#{$i} {
   100% {
-    transform: translate3d((random(95) * 1vw), (random(95) * 1vh), (random(95) * 1vh));
+    transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
   }
 }
 
 .particle:nth-child(#{$i}){
   animation: particle-animation-#{$i} 90s infinite;
-  $size: random(5) + 5 + px;
+  $size: random(4) + 4 + px;
   opacity: calc(random(100) / 100);
   height: $size;
   width: $size;
-  animation-delay: -$i * .5s;
-  transform: translate3d((random(95) * 1vw), (random(95) * 1vh), (random(95) * 1vh));
-  background: hsl(random(360), 70%, 50%);
+  animation-delay: -$i * .3s;
+  transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
+  // background: hsl(random(360), 70%, 50%);
+  background: hsla(0, 100%, 100%, 0.75);
 }
 }

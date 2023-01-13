@@ -1,7 +1,8 @@
 import React from "react";
 import { createRoot, render } from "react-dom/client";
 import App from "./src/App";
-import "../client/src/styles/index.css";
+import "./src/styles/index.css";
+import "./src/assets/forest.png"
 
 const container = document.getElementById("root");
 const root = createRoot(container);

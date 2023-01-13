@@ -8,11 +8,14 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js",
   },
-  mode: "production",
+  mode: "development",
   performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
+    hints: 'error',
+    maxEntrypointSize: 400000,
+    maxAssetSize: 400000,
+    assetFilter: function (assetFilename) {
+      return !assetFilename.endsWith('.png');
+    },
   },
   module: {
     rules: [

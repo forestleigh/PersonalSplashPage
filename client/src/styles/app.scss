@@ -1,8 +1,7 @@
 .card {
     z-index: 9;
-    box-shadow: 0 4px 6px 0 rgb(195, 195, 195);
-    background: whitesmoke;
-    border-radius: 5px;
+    // box-shadow: 0 4px 6px 0 rgb(195, 195, 195);
+    background: rgba(245, 245, 245, 0.66);
     max-width: 300px;
     position: absolute;
     top: 50%;
@@ -19,7 +18,7 @@
 
 h1 {
     color: darkslategrey;
-    font-size: 32px;
+    font-size: 28px;
     padding-bottom: -5px;
   }
 
@@ -34,11 +33,7 @@ a {
 }
 
 img {
-  border-radius: 5px;
-}
-
-body {
-  background: #ecf3f3;
+  border-radius:50%;
 }
 
 .particle {

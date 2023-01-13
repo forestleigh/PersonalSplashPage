@@ -1,12 +1,12 @@
 import React from "react";
 import "../src/styles/app.scss";
-import me from "../src/assets/me.png"
+import me from "../src/assets/me.png";
 
 const App = () => (
     <>
     <div class="outer">
     <div class="card">
-          <img src={me} alt="Forest" width="300px"/>
+          <img src={me} alt="Forest" width="130px"/>
           <h1>Forest Leigh</h1>
           <p class="title">Software Engineer</p>
           <p class="title">Caltech</p>

@@ -3,7 +3,7 @@
     border-radius: 50%;
 }
 
-@for $i from 1 through 120 {
+@for $i from 1 through 300 {
     @keyframes particle-animation-#{$i} {
         100% {
             transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));

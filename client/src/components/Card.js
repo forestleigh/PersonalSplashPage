@@ -9,10 +9,10 @@ const Card = () => (
     <p class="title">Software Engineer</p>
     <p class="title">Caltech</p>
     <a href="https://github.com/forestleigh" target="_blank">
-      <i class="fa fa-github"></i>
+      <i class="fa fa-github fa-lg"></i>
     </a>
     <a href="https://www.linkedin.com/in/forestleigh" target="_blank">
-      <i class="fa fa-linkedin"></i>
+      <i class="fa fa-linkedin fa-lg"></i>
     </a>
   </div>
 );

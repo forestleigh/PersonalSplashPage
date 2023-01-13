@@ -1,0 +1,37 @@
+.card {
+  z-index: 9;
+  background: rgba(245, 245, 245, 0.43);
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: center;
+}
+
+.title {
+  color: rgb(54, 77, 77);
+  font-size: 18px;
+}
+
+h1 {
+  color: darkslategrey;
+  font-size: 28px;
+  padding-bottom: -5px;
+}
+
+p,
+.title {
+  padding: 5px;
+}
+
+a {
+  padding: 18px;
+  margin-top: 10px;
+  color: darkslategrey;
+}
+
+img {
+  border-radius: 50%;
+}

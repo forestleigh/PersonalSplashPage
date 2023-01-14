@@ -3,7 +3,7 @@
     border-radius: 50%;
 }
 
-@for $i from 1 through 300 {
+@for $i from 1 through 250 {
     @keyframes particle-animation-#{$i} {
         100% {
             transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
@@ -17,8 +17,14 @@
         height: $size;
         width: $size;
         animation-delay: -$i * .3s;
+        // controls random appearance of paricles across window
         transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
-        // background: hsl(random(360), 70%, 50%);
         background: hsla(0, 100%, 100%, 0.75);
     }
+
+    .particle:hover {
+        height: 12px;
+        width: 12px;
+    }
 }
+

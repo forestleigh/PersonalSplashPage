@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+let environment = process.env.NODE_ENV;
 
 module.exports = {
   entry: "./client/index.js",
@@ -8,9 +9,9 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js",
   },
-  mode: "development",
+  mode: environment,
   performance: {
-    hints: 'error',
+    hints: false,
     maxEntrypointSize: 400000,
     maxAssetSize: 400000,
     assetFilter: function (assetFilename) {

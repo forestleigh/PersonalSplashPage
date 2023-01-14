@@ -6,10 +6,9 @@ const Magic = () => {
   const mousePosition = useMousePosition();
 
   // pass updated positions to css for perforance animation
-  document.documentElement.style.setProperty('--x', mousePosition.x);
-  document.documentElement.style.setProperty('--y', mousePosition.y);
-
-  console.log("mouse", mousePosition.x, mousePosition.y);
+  // document.documentElement.style.setProperty('--x', mousePosition.x);
+  // document.documentElement.style.setProperty('--y', mousePosition.y);
+  // console.log("mouse", mousePosition.x, mousePosition.y);
 
   const Particles = [];
 

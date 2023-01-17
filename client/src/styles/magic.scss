@@ -3,28 +3,70 @@
     border-radius: 50%;
 }
 
-@for $i from 1 through 250 {
-    @keyframes particle-animation-#{$i} {
+@for $i from 1 through 200 {
+    @keyframes move-magic-random-#{$i} {
         100% {
             transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
-        }
+           }
     }
 
+    @keyframes fade-frames {
+        0% {
+          opacity: 1;
+        }
+  
+        50% {
+          opacity: 0.7;
+        }
+  
+        100% {
+          opacity: 1;
+        }
+      }
+
+        // not currently working...
+      @keyframes scale-frames {
+        0% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+  
+        50% {
+          transform: scale3d(3.2, 3.2, 1);
+        }
+  
+        100% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+      }
+
     .particle:nth-child(#{$i}) {
-        animation: particle-animation-#{$i} 90s infinite;
-        $size: random(4)+4+px;
-        opacity: calc(random(100) / 100);
-        height: $size;
-        width: $size;
+        $moveDuration: 28000 + random(9000) + ms;
+        // $moveDuration: 90s;
+        animation:
+            fade-frames 200ms infinite,
+            move-magic-random-#{$i} $moveDuration infinite,
+            scale-frames-#{$i} 2s infinite;
         animation-delay: -$i * .3s;
+        // animation-delay: random(37000) + ms;
+
+        $particleBaseSize: 12;
+        $circleSize: random($particleBaseSize);
+        width: $circleSize + px;
+        height: $circleSize + px;
+
+        // opacity: calc(random(100) / 100);
+        background: radial-gradient(
+      hsl(180, 5%, 80%),
+      hsl(180, 5%, 80%) 10%,
+      hsla(180, 100%, 80%, 0) 56%
+    );
         // controls random appearance of paricles across window
         transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
-        background: hsla(0, 100%, 100%, 0.75);
     }
 
     .particle:hover {
-        height: 12px;
-        width: 12px;
+        transform: scale(2);
     }
 }
+
 

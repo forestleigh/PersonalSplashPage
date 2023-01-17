@@ -8,10 +8,18 @@
   text-align: align-center;
 }
 
+html,
 body {
-  background: url(../assets/forest.png) no-repeat center center fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  background:radial-gradient(circle farthest-side, transparent 50%, rgba(47, 79, 79, 0.396)),url(../assets/forest.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+

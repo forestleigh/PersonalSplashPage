@@ -18,11 +18,11 @@ const Magic = () => {
 
   return (
     <>
-    <p>
+    {/* <p>
       Your cursor position:
       <br />
       {JSON.stringify(mousePosition)}
-    </p>
+    </p> */}
     <div id="particle-container">{ Particles }</div>
     </>
   );

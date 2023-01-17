@@ -1,30 +1,36 @@
-.particle {
-    position: absolute;
-    border-radius: 50%;
-}
+// canvas {
+//     width: 100vw;
+//     height: 100vh;
+// }
 
-@for $i from 1 through 250 {
-    @keyframes particle-animation-#{$i} {
-        100% {
-            transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
-        }
-    }
+// .particle {
+//     position: absolute;
+//     border-radius: 50%;
+// }
 
-    .particle:nth-child(#{$i}) {
-        animation: particle-animation-#{$i} 90s infinite;
-        $size: random(4)+4+px;
-        opacity: calc(random(100) / 100);
-        height: $size;
-        width: $size;
-        animation-delay: -$i * .3s;
-        // controls random appearance of paricles across window
-        transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
-        background: hsla(0, 100%, 100%, 0.75);
-    }
+// @for $i from 1 through 250 {
+//     @keyframes particle-animation-#{$i} {
+//         // the specified keyframe should occur 100% of the time
+//         100% {
+//             transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1px));
+//         }
+//     }
 
-    .particle:hover {
-        height: 12px;
-        width: 12px;
-    }
-}
+//     .particle:nth-child(#{$i}) {
+//         // animation: particle-animation-#{$i} 90s infinite;
+//         // animation-delay: -$i * .3s;
+//         $size: random(4) + 4+px;
+//         opacity: calc(random(100) / 100);
+//         height: $size;
+//         width: $size;
+//         // controls random appearance of paricles across window
+//         transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1px));
+//         background: hsla(0, 100%, 100%, 0.75);
+//     }
+
+//     .particle:hover {
+//         height: 12px;
+//         width: 12px;
+//     }
+// }
 

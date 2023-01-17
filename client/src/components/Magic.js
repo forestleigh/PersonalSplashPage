@@ -1,14 +1,18 @@
 import React from "react";
 import "../../src/styles/magic.scss";
-import { useMousePosition } from "../utils";
+import { useMousePosition, useMouseClicked, useUpdateParticles } from "../hooks";
 
 const Magic = () => {
+  // implement custom hook to track cursor
   const mousePosition = useMousePosition();
+  // const mouseClicked = useMouseClicked();
+  // const updateParticles = useUpdateParticles();
 
-  // pass updated positions to css for perforance animation
+  
+
+  // pass updated positions to css for animation (confirmed working)
   // document.documentElement.style.setProperty('--x', mousePosition.x);
   // document.documentElement.style.setProperty('--y', mousePosition.y);
-  // console.log("mouse", mousePosition.x, mousePosition.y);
 
   const Particles = [];
 
@@ -22,8 +26,9 @@ const Magic = () => {
       Your cursor position:
       <br />
       {JSON.stringify(mousePosition)}
+      {JSON.stringify(mouseClicked)}
     </p>
-    <div id="particle-container">{ Particles }</div>
+    <canvas id="particle-container">{ Particles }</canvas>
     </>
   );
 };

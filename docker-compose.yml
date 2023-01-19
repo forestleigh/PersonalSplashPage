@@ -1,13 +1,13 @@
 version: '3'
 services:
-  test:
-    image: fleigh/personal-dev
-    container_name: personal-test
+  app:
+    image: fleigh/personal-prod
+    container_name: personal-prod
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
       - .:/usr/src/app
       - node_modules:/usr/src/app/node_modules
-    command: npm run test
+    command: npm run dev:hot
 volumes:
   node_modules:

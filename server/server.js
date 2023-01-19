@@ -5,18 +5,13 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-let environment = process.env.NODE_ENV;
-let isProduction = environment === "production";
-
 // handle parsing request body
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-if (isProduction) {
   // handle request for static files
   app.use(express.static(path.join(__dirname, "../build")));
-}
 
 // get request for index.html
 app.get("/", (req, res) => {

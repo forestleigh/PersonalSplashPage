@@ -1,6 +1,6 @@
+const webpack = require('webpack');
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const node_env = process.env.NODE_ENV;
 
 module.exports = {
   entry: "./client/index.js",
@@ -9,7 +9,7 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js",
   },
-  mode: node_env,
+  mode: 'development',
   performance: {
     hints: false,
     maxEntrypointSize: 400000,
@@ -46,6 +46,7 @@ module.exports = {
       directory: path.join(__dirname, "build"),
       publicPath: "/",
     },
+    headers: { 'Access-Control-Allow-Origin': '*' },
     // Required for Docker to work with dev server
     host: "0.0.0.0",
     compress: true,

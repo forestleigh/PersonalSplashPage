@@ -2,15 +2,15 @@
   "name": "forest-splash",
   "version": "1.0.0",
   "description": "personal-scratch-page",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production && node server/server.js",
-    "build": "NODE_ENV=production && webpack --config ./webpack.config.js",
-    "dev": "NODE_ENV=development && nodemon ./server/server.js & webpack serve --open",
-    "dev:hot": "NODE_ENV=development && nodemon ./server/server.js & webpack-dev-server --open --hot",
-    "docker-dev:hot": "NODE_ENV=development && docker-compose -f docker-compose-dev-hot.yml up",
-    "docker-prod": "NODE_ENV=production && docker-compose -f docker-compose-dev-hot.yml up",
-    "test": "NODE_ENV=test && jest --coverage"
+    "start": "node server/server.js",
+    "build": "webpack --config ./webpack.config.js",
+    "dev": "nodemon ./server/server.js & webpack serve --open",
+    "dev:hot": "nodemon ./server/server.js & webpack-dev-server --open --hot",
+    "docker-dev:hot": "docker-compose -f docker-compose-dev-hot.yml up",
+    "docker-prod": "docker-compose -f docker-compose.yml up",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,7 @@
+FROM node:16.16.0
+ENV NODE_ENV=development
+RUN npm install webpack -g
+WORKDIR /app
+COPY package*.json /app
+RUN npm install
+EXPOSE 3000

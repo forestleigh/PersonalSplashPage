@@ -1,0 +1,49 @@
+{
+  "name": "forest-splash",
+  "version": "1.0.0",
+  "description": "personal-scratch-page",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development nodemon server/server.js & NODE_ENV=development webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forestleigh/personal-splash-page"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "path": "^0.12.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
+    "webkit-npm": "^3.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.24.0",
+    "eslint-plugin-react": "^7.31.8",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.20",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

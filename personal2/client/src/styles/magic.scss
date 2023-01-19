@@ -1,0 +1,65 @@
+.particle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+@for $i from 1 through 100 {
+    @keyframes move-magic-random-#{$i} {
+        100% {
+            transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
+           }
+    }
+
+    @keyframes fade-frames {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+        @keyframes pulse-magic-#{$i} {
+          0% {
+            border: .5px solid rgba(255, 255, 255, 0.1);
+          }
+          50% {
+            background: radial-gradient(hsl(180, 5%, 80%),
+                hsl(180, 5%, 80%) 10%,
+                hsla(180, 5%, 80%, 0.3) 56%);
+          }
+          100% {
+            border: .5px solid rgba(255, 255, 255, 0.1);
+          }
+        }
+
+    .particle:nth-child(#{$i}) {
+        $moveDuration: 98000 + random(9000) + ms;
+        $pulseDuration: 1 + random(6) + s;
+        animation:
+            fade-frames 200ms infinite,
+            move-magic-random-#{$i} $moveDuration infinite,
+            pulse-magic-#{$i} $pulseDuration ease infinite;
+        animation-delay: random(30000) + ms;
+
+        $particleBaseSize: 10;
+        $circleSize: random($particleBaseSize);
+        width: $circleSize + px;
+        height: $circleSize + px;
+
+        // opacity: calc(random(100) / 100);
+        background: radial-gradient(
+      hsl(180, 5%, 80%),
+      hsl(180, 5%, 80%) 10%,
+      hsla(180, 100%, 80%, 0) 56%
+    );
+        // controls random appearance of paricles across window
+        transform: translate3d((random(100) * 1vw), (random(100) * 1vh), (random(100) * 1vh));
+    }
+
+}
+
+

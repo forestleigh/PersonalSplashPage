@@ -1,0 +1,13 @@
+version: '3'
+services:
+  dev:
+    image: forestleigh/personal-dev
+    container_name: personal-dev-hot
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    command: npm run dev:hot
+volumes:
+  node_modules:

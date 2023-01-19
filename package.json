@@ -6,7 +6,10 @@
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
     "build": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development nodemon server/server.js & NODE_ENV=development webpack serve --open"
+    "dev": "NODE_ENV=development nodemon ./server/server.js & webpack serve --open",
+    "dev:hot": "NODE_ENV=development nodemon ./server/server.js & webpack-dev-server --open --hot",
+    "docker-dev:hot": "docker-compose -f docker-compose-dev-hot.yml up",
+    "test": "NODE_ENV=test jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -25,9 +28,7 @@
     "express": "^4.18.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.1",
-    "webkit-npm": "^3.1.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",

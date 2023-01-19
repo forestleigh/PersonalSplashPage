@@ -4,7 +4,7 @@ services:
     image: fleigh/personal-prod
     container_name: personal-prod
     ports:
-      - '3000:3000'
+      - '8081:8081'
     volumes:
       - .:/usr/src/app
       - node_modules:/usr/src/app/node_modules

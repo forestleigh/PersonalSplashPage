@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/server.js",
     "build": "webpack --config ./webpack.config.js",
-    "dev": "nodemon ./server/server.js & webpack serve --open",
+    "dev": " nodemon ./server/server.js & webpack serve --open",
     "dev:hot": "nodemon ./server/server.js & webpack-dev-server --open --hot",
     "docker-dev:hot": "docker-compose -f docker-compose-dev-hot.yml up",
     "docker-prod": "docker-compose -f docker-compose.yml up",

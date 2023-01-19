@@ -1,12 +1,3 @@
-@keyframes message-frames {
-  0% {
-    opacity: 0;
-  }
-  
-  100% {
-    opacity: 1;
-  }
-}
 
 .card {
   z-index: 9;
@@ -18,30 +9,26 @@
   transform: translate(-50%, -50%);
   padding: 12px;
   text-align: center;
-  animation: message-frames 6s ease 1s forwards;
 }
 
 img {
   border-radius: 50%;
-  animation: message-frames 6s ease 1s forwards;
 }
 
 h1 {
   color: darkslategrey;
   font-size: 28px;
   padding-bottom: -5px;
-  animation: message-frames 6s ease 1s forwards;
 }
 
-p,
-.title {
+p {
   padding: 5px;
-  animation: message-frames 12s ease 1s forwards;
 }
 
 .title {
   color: rgb(54, 77, 77);
   font-size: 18px;
+  padding: 5px;
 }
 
 i {
@@ -50,6 +37,24 @@ i {
   padding-top: 8px;
   color: darkslategrey;
   font-size: 28px;
-  animation: message-frames 15s ease 1s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+.card, 
+img,
+h1,
+p,
+.title,
+i {
+  animation: fade-in 7s ease 1 forwards;
 }
 

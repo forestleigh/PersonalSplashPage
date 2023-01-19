@@ -5,10 +5,11 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
-    "build": "NODE_ENV=production webpack",
+    "build": "NODE_ENV=production webpack --config ./webpack.config.js",
     "dev": "NODE_ENV=development nodemon ./server/server.js & webpack serve --open",
     "dev:hot": "NODE_ENV=development nodemon ./server/server.js & webpack-dev-server --open --hot",
     "docker-dev:hot": "docker-compose -f docker-compose-dev-hot.yml up",
+    "docker-prod": "docker-compose -f docker-compose-dev-hot.yml up",
     "test": "NODE_ENV=test jest --coverage"
   },
   "repository": {

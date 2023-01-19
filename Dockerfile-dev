@@ -1,7 +1,6 @@
-FROM node:16.16.0
-ENV NODE_ENV=development
+FROM node:16.16
 RUN npm install webpack -g
-WORKDIR /app
-COPY package*.json /app
+WORKDIR /usr/src/app
+COPY package*.json .
 RUN npm install
 EXPOSE 3000

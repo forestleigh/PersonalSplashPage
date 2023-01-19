@@ -46,9 +46,11 @@ module.exports = {
       directory: path.join(__dirname, "build"),
       publicPath: "/",
     },
-    proxy: {
-      "/api": "http://localhost:3000",
-    },
+    // Required for Docker to work with dev server
+    host: "0.0.0.0",
+    compress: true,
+    port: 8080,
+    hot: true
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -4,7 +4,9 @@ import "../../src/styles/card.scss"
 
 const Card = () => (
   <div className="card">
-    <img src={me} alt="Forest" width="130px" />
+    <div class="box-shadow">
+      <img src={me} alt="Forest" width="130px;" />
+    </div>
     <h1>Forest Leigh</h1>
     <p className="title">Software Engineer</p>
     <p className="title">Caltech</p>

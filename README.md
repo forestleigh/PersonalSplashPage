@@ -2,7 +2,7 @@
 
 ## Highlights
  - custom CSS partcile animation
- - Techstack: React, Node, Webpack
+ - Techstack: React, Node, Webpack, Docker, AWS
 ## LinkedIn
 https://www.linkedin.com/in/forestleigh
 
